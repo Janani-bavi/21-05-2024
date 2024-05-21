@@ -1,0 +1,7 @@
+n = int(input("Enter the lower bound: "))
+m = int(input("Enter the upper bound: "))
+divisible_by_9 = [num for num in range(n, m+1) 
+if num % 9 == 0]
+sum_divisible_by_9 = sum(divisible_by_9)
+print("Integers divisible by 9 between", n, "and", m, "are:", divisible_by_9)
+print("Their sum is:", sum_divisible_by_9)
