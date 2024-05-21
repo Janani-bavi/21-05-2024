@@ -1,0 +1,9 @@
+def print_chessboard():
+    size = 8 
+    for i in range(size):
+        for j in range(size):
+            if (i % 2 == 0 and j % 2 == 0) or (i % 2 == 1 and j % 2 == 1):
+                print("██", end=" ")
+            else:
+                print("  ", end=" ")  # Otherwise, print a white cell
+        print()  
