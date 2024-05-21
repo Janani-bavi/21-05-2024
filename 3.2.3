@@ -1,0 +1,20 @@
+    hour = 0
+    minute = 0
+    for _ in range(60):
+        hour_angle = (30 * hour) + (0.5 * minute)
+        minute_angle = 6 * minute
+        angle_diff = abs(hour_angle - minute_angle)
+        if angle_diff == 0:
+            return hour, minute
+        minute += 1
+        if minute == 60:
+            minute = 0
+            hour += 1
+        if hour == 12:
+            hour = 0
+coincide_time = find_coincide_time()
+if coincide_time:
+    hour, minute = coincide_time
+    print("The hour and minute hands coincide at :(hour, minute))
+else:
+    print("No coincide time found in the next hour.")
