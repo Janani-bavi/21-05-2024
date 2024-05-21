@@ -1,0 +1,5 @@
+def check_age(age, limit):
+    if age >= limit:
+        print("You meet the age requirement.")
+    else:
+        print("You do not meet the age requirement.")
