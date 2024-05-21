@@ -1,0 +1,12 @@
+def calculate_bill(units):
+    if units <= 199:
+        return units * 1.20
+    elif 200 <= units < 400:
+        return units * 1.50
+    elif 400 <= units < 600:
+        return units * 1.80
+    else:
+        return units * 2.00
+units_consumed = int(input("Enter the units consumed: "))
+total_amount = calculate_bill(units_consumed)
+print("Total amount to be paid: Rs.", total_amount)
