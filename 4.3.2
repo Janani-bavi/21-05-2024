@@ -1,0 +1,8 @@
+n = int(input("Enter the number of terms: "))
+fibonacci = [0, 1]
+while len(fibonacci) < n:
+    next_term = fibonacci[-1] + fibonacci[-2]
+    fibonacci.append(next_term)
+print("First", n, "terms of Fibonacci series in reverse order:")
+for term in reversed(fibonacci):
+    print(term, end=" ")
