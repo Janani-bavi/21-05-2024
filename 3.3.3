@@ -1,0 +1,15 @@
+def calculate_fine(days_late):
+    if days_late <= 5:
+        fine = days_late * 0.5
+    elif 6 <= days_late <= 10:
+        fine = (5 * 0.5) + ((days_late - 5) * 1)
+    elif days_late > 10 and days_late <= 30:
+        fine = (5 * 0.5) + (5 * 1) + ((days_late - 10) * 5)
+    else:
+        print("Membership cancelled due to late return.")
+        return None
+    return fine
+days_late = int(input("Enter the number of days the member is late to return the book: "))
+fine = calculate_fine(days_late)
+if fine is not None:
+    print("Fine for {} days late return: Rs. {}".format(days_late, fine))
